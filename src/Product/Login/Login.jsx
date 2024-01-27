@@ -4,6 +4,7 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import axios from "axios";
 import CryptoJS from "crypto-js";
 import { useFormik } from "formik";
+import * as Yup from 'yup';
 
 import "./Login.css";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -15,6 +16,15 @@ const EcommerceLogin = () => {
       name: "",
       password: "",
     },
+    validationSchema: Yup.object({
+      name: Yup.string().email('Invalid email address').required('Email is required'),
+      password: Yup.string()
+      .matches(
+        /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+        'Password must be 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character (@$!%*?&)'
+      )
+      .required('Password is required'),
+    }),
     onSubmit: (values) => {
       loginApicall(values);
     },
@@ -50,7 +60,9 @@ const EcommerceLogin = () => {
         const msg = res.data.data;
         navigate("/products");
       })
-      .catch(() => {});
+      .catch((res) => {
+        window.alert(res?.response.data.status.message)
+      });
   };
 
   return (
@@ -80,6 +92,7 @@ const EcommerceLogin = () => {
                       className="form-control"
                       {...formik.getFieldProps("name")}
                     />
+                    <div className="text-danger">{formik.touched.name && formik.errors.name && formik.errors.name}</div>
                   </div>
 
                   <div className="mb-3">
@@ -93,6 +106,8 @@ const EcommerceLogin = () => {
                       name="password"
                       className="form-control"
                     />
+                    <div className="text-danger">{formik.touched.password && formik.errors.password && formik.errors.password}</div>
+
                   </div>
 
                   <Button
