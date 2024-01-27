@@ -44,7 +44,7 @@ export const Product = () => {
   const Showdata = () => {
     return (
       <>
-        <div className="input-group mb-3 w-300" style={{ width: "300px" }}>
+        <div className="input-group mb-3 w-300 " style={{ width: "300px" }}>
           <input
             type="text"
             className="form-control"
@@ -57,7 +57,7 @@ export const Product = () => {
           </button>
         </div>
 
-        <div className="row justify-content-center">
+        <div className="row justify-content-center gap-3">
           {filtter.map((product, index) => (
             <div className="card p-1 gap-3" key={index}>
               <div className="w-100 h-100">

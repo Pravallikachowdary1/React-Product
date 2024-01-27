@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import Product from './Pages/Product'
 import './App.css'
 import Login from './Login/Login'
-import About from './Pages/About'
+import About from './Pages/About/About'
 export const Index = () => {
   return (
     <div>

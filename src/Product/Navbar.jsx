@@ -57,13 +57,20 @@ const Navbar = () => {
   };
   return (
 
-    <div>
-      {(location.pathname === '/products' || location.pathname === '/about')  &&(
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
-              <Link className="navbar-brand" to="#">
-                Lifcart{" "}
-              </Link>
+   
+     <div>
+  {(location.pathname === '/products' || location.pathname === '/about') && (
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="#" >
+          <img
+            src="https://img.freepik.com/premium-photo/realistic-organic-certified-label-black-silhouette-white-mask-use_556904-1284.jpg?w=740"
+            alt="Logo"
+            style={{ width: "80px", height: "80px", marginRight: "10px" }}
+          />
+          {" "}
+          
+        </Link>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -85,11 +92,11 @@ const Navbar = () => {
               </li> */}
 
                   <li className="nav-item">
-                    <Link className="link-secondary me-3" to="/products">
+                    <Link className="link-secondary me-3" to="/products" style={{fontFamily:"sans-serif", fontWeight: '600'}}>
                       Product
                     </Link>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item" style={{fontFamily:"sans-serif", fontWeight: '600'}}>
                     <Link className="link-secondary me-4" to="/about">
                       About
                     </Link>
