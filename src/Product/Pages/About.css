@@ -1,0 +1,75 @@
+/* About.css */
+
+.container {
+    /* max-width: 800px; */
+    margin: 0 auto;
+    display:flex; 
+    padding: 20px;
+    flex-direction: column;
+  }
+  
+  h1, h2, h3 {
+    color: #333;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  ol, ul {
+    padding-left: 20px;
+  }
+  
+  code {
+    background-color: #f4f4f4;
+    padding: 2px 4px;
+    border: 1px solid #ddd;
+  }
+  
+  pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    white-space: pre-wrap;
+  }
+  
+  /* Flexbox column layout */
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  section h2 {
+    margin-bottom: 10px;
+  }
+  
+  section h3 {
+    margin-bottom: 5px;
+  }
+  
+  /* Custom styling for different sections */
+  #overview {
+    background-color: #f8f8f8;
+    padding: 15px;
+  }
+  
+  #table-of-contents {
+    background-color: #f8f8f8;
+    padding: 15px;
+  }
+  
+  #folder-structure, #components, #pages, #styles, #main-entry-points, #global-styles {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  
