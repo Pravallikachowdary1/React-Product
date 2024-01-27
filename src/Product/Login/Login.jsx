@@ -79,7 +79,7 @@ const EcommerceLogin = () => {
                 className="card-img-top"
               />
               <Card.Body>
-                <h2 className="text-center mb-4">E-Commerce Login</h2>
+                <h2 className="text-center mb-4">Login</h2>
                 <div>
                   <div className="mb-3">
                     <label htmlFor="email" className="form-label">
